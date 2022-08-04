@@ -1,33 +1,17 @@
 
-
+// initializing variables
 const button = document.querySelector("#btn-search");
 const quote = document.querySelector("#para");
-
+// url for random quote
 const url = "https://api.quotable.io/random";
 
-// const random = ()=>{
-//     fetch(url)
-//     .then(res=>
-//         res.json()
-//     )
-//     .then(data=>{
-   
-//         quote.innerText = `${data.content}`;
-
-//     }
-        
-//     )
-// }
-
-// button.addEventListener('click', random);
-// random();
+// fetching the data from url
 const randomQuote = ()=>{
     fetch(url)
     .then(res => res.json())
     .then((data)=>{
-        // console.log(data.joke);
         quote.innerText = data.content;
     })
 }
-
+// adding event to the button
 button.addEventListener('click', randomQuote)
