@@ -41,8 +41,13 @@ p{
     align-items: center;
     margin:10px;
     font-weight: 500;
+    opacity: 0;
 }
 
+.fade{
+    opacity: 1;
+    transition: opacity 1.6s;
+}
 button{
    width:150px;
    height:50px;
